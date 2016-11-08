@@ -1,4 +1,4 @@
-FROM ausov/docker-ci-node:latest
+FROM kradio5/docker-ci-node:latest
 
 # Install pip
 RUN apt-get update && apt-get install -qy python-pip && \
