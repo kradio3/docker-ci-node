@@ -1,4 +1,4 @@
-FROM node:6
+FROM node:11
 
 ENV NPM_CONFIG_LOGLEVEL warn
 
@@ -9,9 +9,3 @@ RUN apt-get update && \
         unzip && \
   apt-get clean && apt-get autoclean && apt-get --purge -y autoremove && \
   rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
-
-# Pre-install npm packages
-RUN npm install -g node-gyp && \
-    npm install -g node-sass && \
-    npm cache clean && \
-    rm -rf /tmp/* /var/tmp/*
